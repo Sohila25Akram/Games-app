@@ -1,0 +1,87 @@
+#hero{
+  padding-top: 60px;
+  @media(min-width: 768px){
+    padding: 120px 0 80px;
+  }
+}
+#hero .hero-content{
+  @media (min-width: 768px){
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 16px;
+  }
+}
+#hero .hero-content .game-card{
+  display: block;
+  height: 400px;
+  @media (min-width: 768px) {
+     height: 100%;
+  }
+}
+#hero .hero-content .game-card:hover .gradient-black{
+  height: 50%;
+  background: var(--gradient-black);
+}
+#hero .hero-content .game-card .img-container img{
+  width: 100%;
+  height: auto;
+}
+#hero .hero-content aside ul{
+  list-style: none;
+}
+#hero .hero-content aside ul li{
+  height: 120px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+#hero .hero-content aside ul li.active{
+ border: 1px solid var(--red)
+}
+#hero .hero-content aside ul li .img-container{
+  min-width: 100px;
+  width: 100px;
+  height: 100%;
+  overflow: hidden;
+}
+#hero .hero-content aside ul li .img-container img{
+  height: 100%;
+  width: auto;
+}
+#hero .hero-content aside ul li span{
+  display: block;
+  margin-bottom: 16px;
+}
+#hero .hero-content aside ul li p:first-of-type{
+  color: var(--red);
+  font-size: 12px;
+}
+#games-of-category .category-sec{
+  border-top: 1px solid var(--red);
+}
+#games-of-category .category-sec .head-sec{
+   margin: 16px 0;  
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+#games-of-category .category-sec .head-sec h2{
+  font-size: 20px;
+  text-transform: capitalize;
+}
+#games-of-category .category-sec .head-sec a{
+  color: var(--red);
+  text-decoration: none;
+}
+#games-of-category .category-sec .games-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+  @media (min-width: 768px){
+    gap: 32px;
+  }
+}

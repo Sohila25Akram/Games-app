@@ -1,0 +1,144 @@
+#main-details .content {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#main-details .content .background .gradient-circle {
+  background: radial-gradient(rgba(0, 0, 0, 0.7), #000);
+}
+#main-details .content .background article {
+  display: flex;
+  gap: 32px;
+  flex-direction: column-reverse;
+  padding-top: 120px;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+    gap: 72px;
+  }
+}
+#main-details .content .background article .description {
+  position: relative;
+  z-index: 0;
+  flex-grow: 1;
+}
+#main-details .content .background article .description .sec-header {
+  margin-bottom: 16px;
+}
+#main-details .content .background article .description .sec-header h2 {
+  font-size: 30px;
+}
+#main-details .content .background article .description h2 {
+  max-width: 400px;
+}
+#main-details .content .background article .description a.red-btn {
+  width: 100%;
+  text-align: center;
+}
+#main-details .content .background article .main-img {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  margin: 0 auto;
+  min-width: 330px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (min-width: 768px) {
+    max-width: 74%;
+  }
+
+  @media (min-width: 992px) {
+    min-width: 50%;
+    max-width: 50%;
+    height: 400px;
+  }
+}
+#main-details .content .background article .main-img img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+#main-details .content .container:last-child {
+  padding-bottom: 120px;
+}
+#main-details .content details {
+  margin-top: 32px;
+}
+#main-details .content details summary {
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+#main-details .content ul {
+  list-style: none;
+  margin: 32px 0;
+}
+#main-details .content ul li {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 150px 1fr;
+  padding: 6px 0;
+  gap: 8px;
+}
+#main-details .content ul li h4 {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 10px;
+  color: red;
+}
+#main-details .content ul li span {
+  width: fit-content;
+  font-size: 14px;
+}
+#main-details .content .background .some-screenshots-h.container {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+#main-details .content .background .screenshots-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: 12px;
+  position: relative;
+  z-index: 0;
+  margin-top: 32px;
+}
+
+#main-details .content .background .screenshots-container .screenshot {
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  position: relative;
+}
+#main-details .content .background .screenshots-container .screenshot img {
+  height: 100%;
+}
+#main-details
+  .content
+  .background
+  .screenshots-container
+  .screenshot
+  .gradient-black {
+  height: 100%;
+  background-color: var(--transparent-red-light);
+}
+#main-details
+  .content
+  .background
+  .screenshots-container
+  .screenshot:hover
+  .gradient-black {
+  height: initial;
+  background-color: initial;
+}
+
+#main-details .description-p.long{
+  margin-top: 32px;
+}

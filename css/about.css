@@ -1,0 +1,82 @@
+#hero {
+  padding-top: 120px ;
+}
+#hero article {
+  width: 100%;
+}
+#hero article p {
+  margin: 60px 0 40px;
+  text-align: justify;
+}
+#download {
+  background-image: url("../assets/cover-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#download .content {
+  padding: 160px 0;
+  padding-top: 0;
+}
+#download .content h2 {
+  margin-bottom: 40px;
+}
+#download .content > p {
+  font-size: 30px;
+  text-transform: capitalize;
+  margin-bottom: 100px;
+}
+#download .content > div {
+  display: flex;
+  gap: 16px;
+  @media (min-width: 600px){
+    gap: 40px
+  }
+}
+#download .content button {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  border: 0;
+  border: 1px solid var(--white);
+  border-radius: var(--radius);
+  background-color: var(--black);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+#download .content button .icon-container {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+#download .content button .icon-container img {
+  width: 140%;
+}
+#download .content button:first-of-type .icon-container {
+  font-size: 40px;
+}
+#download .content button .get {
+  text-align: left;
+}
+#download .content button .get span {
+  font-size: 12px;
+}
+#download .content button .get p {
+  font-size: 16px;
+  @media (min-width: 786px){
+    font-size: 22px;
+  }
+}
+#download .content button .get div {
+  position: absolute;
+  right: -35px;
+  top: -20px;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(var(--gray), transparent);
+  transform: skew(45deg);
+}

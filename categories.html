@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/categories.css" />
+</head>
+<body>
+    <header>
+      <div class="container">
+        <span class="logo">logo</span>
+        <label for="menu"><i class="fa-solid fa-bars"></i></label>
+        <input type="checkbox" id="menu">
+        <nav>
+          <ul>
+            <li><a href="index.html">store</a></li>
+            <li><a href="" class="active">categories</a></li>
+            <li><a href="about.html">about</a></li>
+          </ul>
+        </nav>
+        <a href="" class="red-btn">play now</a>
+      </div>
+    </header>
+    <section id="layout">
+        <div>
+            <aside>
+                <div>
+                    <h4>sort by</h4>
+                    <ul class="sort-container filter-container"></ul>
+                </div>
+                <div>
+                    <h4>filter by platform</h4>
+                    <ul class="filter-by-platform-container filter-container"></ul>
+                </div>
+                <div>
+                    <h4>filter by category</h4>
+                    <ul class="filter-by-category-container filter-container"></ul>
+                </div>
+            </aside>
+        </div>
+        <div>
+            <section id="banner">
+                <div class="overlay-red">
+                    <div class="container">
+                    <article>
+                        <h2>Games</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                        facere odio placeat voluptate. Possimus, quo illo exercitationem
+                        sed obcaecati aut ut assumenda repellat laudantium dolor sit,
+                        necessitatibus molestiae error eligendi.
+                        </p>
+                    </article>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="games-container"></div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <script type="module" src="scripts/prepare-filter.js"></script>
+</body>
+</html>
