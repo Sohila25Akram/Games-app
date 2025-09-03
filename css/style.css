@@ -191,15 +191,6 @@ header nav ul li a.active::after {
   bottom: 0;
   left: 0;
   padding: 12px;
-<<<<<<< HEAD
-=======
-}
-.game-card .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 12px;
->>>>>>> 17d8bdd00d56199ac22e16061e15f65723dffd37
   text-align: left;
 }
 .game-card .caption h3 {
