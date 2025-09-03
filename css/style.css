@@ -197,6 +197,7 @@ header nav ul li a.active::after {
   bottom: 0;
   left: 0;
   padding: 12px;
+  text-align: left;
 }
 .game-card .caption h3 {
   font-size: 24px;
