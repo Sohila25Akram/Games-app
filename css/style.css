@@ -123,13 +123,11 @@ header nav{
   padding: 16px 0;
   border-top: 2px solid var(--black-red);
   border-bottom: 2px solid var(--black-red);
-  /* height: calc(100vh - 60px); */
   @media (min-width: 768px){
     position: static;
     width: fit-content;
     padding: 0;
     border: none;
-    /* height: fit-content; */
   }
 }
 header nav ul {
@@ -148,6 +146,7 @@ header nav ul li a {
   padding: 16px 8px;
   color: var(--white);
   position: relative;
+  outline: none;
 }
 header nav ul li a::after {
   content: "";

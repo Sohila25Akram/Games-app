@@ -1,5 +1,5 @@
-import { createGameCard } from "./prepare-game-card.js";
-import { loadGamesOfCategory } from "./fetch.js";
+import { createGameCard } from "./game-card.js";
+import { fetchGamesOfCategory } from "./api-fetch.js";
 
 const mostPopular = [
   {
@@ -81,8 +81,8 @@ mostPopular.forEach((game, index) => {
     displayGameDetails(game);
   }
 
-    li.addEventListener('click', () => {
-     if (activeItem) {
+  li.addEventListener('click', () => {
+    if (activeItem) {
       activeItem.classList.remove('active');
     }
 
@@ -103,5 +103,65 @@ function displayGameDetails(game) {
   gameCardContainer.appendChild(card);
 }
 
+//---------------------------------------------------------
+
+const gamesOfCategory = document.querySelector('#games-of-category .container')
+
+function createGamesListSnapshot(category, games){
+
+  const categorySection = document.createElement('section');
+  categorySection.id = `category-${category}`;
+  categorySection.className = 'category-sec';
+
+  const headSec = document.createElement('div');
+  headSec.className = 'head-sec'
+
+  const title = document.createElement('h2');
+  title.textContent = category;
+
+  const linkViewMore = document.createElement('a');
+  linkViewMore.href = `categories.html?category=${category}`;
+  linkViewMore.textContent = 'view more';
+
+  headSec.appendChild(title);
+  headSec.appendChild(linkViewMore);
+  categorySection.appendChild(headSec);
+
+  const gamesList = document.createElement('div');
+  gamesList.className = 'games-list';
+
+  games.forEach(item => {
+    const card = createGameCard(item);
+    gamesList.appendChild(card);
+  });
+
+  categorySection.appendChild(gamesList);
+  gamesOfCategory.appendChild(categorySection);
+}
+
+const mostPopularCategories = [
+  'action',
+  'strategy',
+  'shooter',
+  'sandbox',
+  'pvp',
+  'survival',
+  'anime',
+  'open-world',
+  'sports',
+  'tower-defense',
+  'battle-royale',
+  'moba',
+  'pixel',
+  '2d'
+
+]
+export function loadGamesOfCategory() {
+  mostPopularCategories.forEach(c => {
+    fetchGamesOfCategory(c).then(r => createGamesListSnapshot(c, r.expectedRes));
+  });
+}
 
 loadGamesOfCategory();
+
+

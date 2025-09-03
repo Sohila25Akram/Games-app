@@ -1,5 +1,6 @@
 import {sortByArr, platforms, categories} from './data.js';
-import {fetchGamesListWithFilter} from './fetch.js';
+import {fetchGamesListWithFilter} from './api-fetch.js';
+import { renderGameList } from './game-list.js';
 
 
 const sortContainer = document.querySelector(".sort-container");
@@ -106,19 +107,5 @@ function handleChange(element, checkbox, nameType) {
     }
   }
 
-  fetchGamesListWithFilter(selectedSort, selectedPlatform, selectedCategory);
+  fetchGamesListWithFilter(selectedSort, selectedPlatform, selectedCategory).then(r => renderGameList(r));
 }
-
-
-window.addEventListener('DOMContentLoaded', () => {
-  const params = new URLSearchParams(window.location.search);
-  const gamesCategory = params.get('category');
-
-  if (gamesCategory) {
-    selectedCategory = gamesCategory
-  } else {
-    console.error('No category found in URL.');
-  }
-  
-  fetchGamesListWithFilter(selectedSort, selectedPlatform, selectedCategory);
-});

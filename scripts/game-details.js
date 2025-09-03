@@ -7,7 +7,8 @@ const screenShotsList = document.querySelector("#main-details .screenshots-conta
 const backgroundImg = document.querySelector('#main-details .background');
 const visitedLink = document.querySelector('#main-details a');
 const generalList = document.querySelectorAll('.general li');
-const requirementsContainer = document.querySelector('.requirements-container')
+const requirementsContainer = document.querySelector('.requirements-container');
+
 
 export function createGameDetails(game) {
   const titleEl = createTitle(game);
@@ -76,14 +77,11 @@ function createScreenShot(screenShot){
     const divContainer = document.createElement('div');
     divContainer.className = "screenshot";
 
-    // const ImgEl = createScreenShotImage(screenShot);
-
     createScreenShotImgBackground(divContainer, screenShot)
 
     const gradientDiv = document.createElement("div");
     gradientDiv.className = "gradient-black"
 
-    // divContainer.appendChild(ImgEl);
     divContainer.appendChild(gradientDiv);
 
     return divContainer;
@@ -93,14 +91,6 @@ function createScreenShotImgBackground(element, screenShot){
   element.style.backgroundSize = 'cover';
   element.style.backgroundPosition = 'center'
 }
-
-// function createScreenShotImage(screenShot) {
-//     const img = document.createElement('img');
-//     img.src = screenShot;
-
-//     return img;
-// }
-
 
 function createGeneralList(game) {
   const values = [game.platform, game.developer, game.genre, game.release_date];
