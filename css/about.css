@@ -8,8 +8,26 @@
   margin: 24px 0;
   text-align: justify;
 }
+#hero article p:last-child {
+  margin: 0;
+}
 #hero article p:first-of-type{
   margin-top: 60px;
+}
+#mission h3, #values h3{
+  margin-bottom: 24px;
+}
+#values ul li{
+  color: var(--gray);
+  list-style: none;
+  padding: 4px 0;
+  display: flex;
+}
+#values ul li i{
+  font-size: 14px;
+  margin-right: 8px;
+  color: var(--red);
+  width: 18px;
 }
 #download {
   background-image: url("../assets/cover-1.jpg");
@@ -18,7 +36,7 @@
 }
 #download .content {
   padding: 160px 0;
-  padding-top: 0;
+  padding-top: 60px;
 }
 #download .content h3 {
   margin-bottom: 40px;
