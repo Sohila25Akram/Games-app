@@ -51,6 +51,8 @@
 #hero .hero-content aside ul li .img-container img{
   height: 100%;
   width: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 #hero .hero-content aside ul li span{
   display: block;

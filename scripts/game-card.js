@@ -1,5 +1,5 @@
-export function createGameCard(game, showDesc= false) {
-    const gameImg = createCardImg(game);
+export function createGameCard(game, showDesc= false, isLazy= true) {
+    const gameImg = createCardImg(game, isLazy);
     const gradientCard = createCardGradient();
     const headerEl = createCardHeader(game);
     const descEl = createCardDesc(game);
@@ -18,9 +18,13 @@ function createCard(gameImg, gradientCard, caption, gameId){
     return gameCard;
 }
 
-function createCardImg(game){
+function createCardImg(game, isLazy){
     const gameImg = document.createElement("img");
-    gameImg.src = game.thumbnail;
+    gameImg.src = `https://res.cloudinary.com/ddtrgw4lw/image/fetch/f_webp/${game.thumbnail}`;
+    gameImg.alt = game.title;
+    if(isLazy){
+        gameImg.loading = 'lazy';
+    }
     return gameImg;
 }
 

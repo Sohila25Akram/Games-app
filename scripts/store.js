@@ -5,7 +5,7 @@ const mostPopular = [
   {
         "id": 601,
         "title": "Delta Force",
-        "thumbnail": "https://www.freetogame.com/g/601/thumbnail.jpg",
+        "thumbnail": "https://res.cloudinary.com/ddtrgw4lw/image/fetch/f_webp/https://www.freetogame.com/g/601/thumbnail.jpg",
         "short_description": "A free-to-play team-based tactical shooter.",
         "game_url": "https://www.freetogame.com/open/delta-force",
         "genre": "Shooter",
@@ -18,7 +18,7 @@ const mostPopular = [
     {
         "id": 516,
         "title": "PUBG: BATTLEGROUNDS",
-        "thumbnail": "https://www.freetogame.com/g/516/thumbnail.jpg",
+        "thumbnail": "https://res.cloudinary.com/ddtrgw4lw/image/fetch/f_webp/https://www.freetogame.com/g/516/thumbnail.jpg",
         "short_description": "Get into the action in one of the longest running battle royale games PUBG Battlegrounds.",
         "game_url": "https://www.freetogame.com/open/pubg",
         "genre": "Shooter",
@@ -31,7 +31,7 @@ const mostPopular = [
     {
         "id": 599,
         "title": "Marvel Rivals",
-        "thumbnail": "https://www.freetogame.com/g/599/thumbnail.jpg",
+        "thumbnail": "https://res.cloudinary.com/ddtrgw4lw/image/fetch/f_webp/https://www.freetogame.com/g/599/thumbnail.jpg",
         "short_description": "A free-to-play superhero team shooter from NetEase.",
         "game_url": "https://www.freetogame.com/open/marvel-rivals",
         "genre": "Shooter",
@@ -44,7 +44,7 @@ const mostPopular = [
     {
         "id": 57,
         "title": "Fortnite",
-        "thumbnail": "https://www.freetogame.com/g/57/thumbnail.jpg",
+        "thumbnail": "https://res.cloudinary.com/ddtrgw4lw/image/fetch/f_webp/https://www.freetogame.com/g/57/thumbnail.jpg",
         "short_description": "A free-to-play, standalone mode of Epic Game's Fortnite. ",
         "game_url": "https://www.freetogame.com/open/fortnite-battle-royale",
         "genre": "Shooter",
@@ -98,7 +98,7 @@ mostPopular.forEach((game, index) => {
 function displayGameDetails(game) {
   gameCardContainer.innerHTML = '';
 
-  const card = createGameCard(game, true);
+  const card = createGameCard(game, true, false);
 
   gameCardContainer.appendChild(card);
 }
